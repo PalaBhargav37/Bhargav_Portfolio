@@ -24,7 +24,9 @@
   right:32px;
 }
 
-/* Social Buttons */
+/* =========================
+   Desktop Social Buttons
+========================= */
 
 .sb-link{
   width:46px;
@@ -33,18 +35,10 @@
   align-items:center;
   justify-content:center;
   border-radius:14px;
-
   color:#d9d9ff;
-
   background:rgba(255,255,255,.05);
-
   border:1px solid rgba(255,255,255,.08);
-
   backdrop-filter:blur(12px);
-
-  box-shadow:
-      0 0 0 rgba(139,92,246,.4);
-
   transition:.35s;
   position:relative;
   overflow:hidden;
@@ -72,13 +66,9 @@
 }
 
 .sb-link:hover{
-
   transform:translateY(-7px) scale(1.08);
-
-  color:white;
-
+  color:#fff;
   border-color:#8b5cf6;
-
   box-shadow:
       0 0 18px rgba(139,92,246,.45),
       0 0 40px rgba(139,92,246,.18);
@@ -92,21 +82,20 @@
   transform:scale(1.12);
 }
 
-/* Line */
+/* =========================
+   Vertical Line
+========================= */
 
 .sb-line{
   width:2px;
   height:130px;
-
   background:linear-gradient(
       to bottom,
       rgba(139,92,246,.95),
       rgba(6,182,212,.45),
       transparent
   );
-
   border-radius:999px;
-
   animation:lineGlow 2.8s infinite;
 }
 
@@ -126,54 +115,43 @@ opacity:.45;
 
 }
 
-/* Email */
+/* =========================
+   Email
+========================= */
 
 .sb-email{
-
-writing-mode:vertical-rl;
-
-font-family:var(--font-mono);
-
-font-size:.82rem;
-
-letter-spacing:.15em;
-
-text-decoration:none;
-
-color:#d8d8ff;
-
-transition:.35s;
-
-padding:10px 0;
-
+  writing-mode:vertical-rl;
+  font-family:var(--font-mono);
+  font-size:.82rem;
+  letter-spacing:.15em;
+  text-decoration:none;
+  color:#d8d8ff;
+  transition:.35s;
+  padding:10px 0;
 }
 
 .sb-email:hover{
-
-color:#fff;
-
-transform:translateY(-6px);
-
-text-shadow:
-
-0 0 10px rgba(139,92,246,.9),
-
-0 0 25px rgba(139,92,246,.45);
-
+  color:#fff;
+  transform:translateY(-6px);
+  text-shadow:
+      0 0 10px rgba(139,92,246,.9),
+      0 0 25px rgba(139,92,246,.45);
 }
 
-/* Floating animation */
+/* =========================
+   Floating Animation
+========================= */
 
 .sidebar-left .sb-link:nth-child(1){
-animation:float 3s ease-in-out infinite;
+  animation:float 3s ease-in-out infinite;
 }
 
 .sidebar-left .sb-link:nth-child(2){
-animation:float 3s ease-in-out infinite .4s;
+  animation:float 3s ease-in-out infinite .4s;
 }
 
 .sidebar-left .sb-link:nth-child(3){
-animation:float 3s ease-in-out infinite .8s;
+  animation:float 3s ease-in-out infinite .8s;
 }
 
 @keyframes float{
@@ -192,10 +170,130 @@ transform:translateY(0);
 
 }
 
-@media(max-width:1100px){
+/* =========================
+   Mobile Bottom Bar
+========================= */
+
+.mobile-sidebar{
+  display:none;
+}
+
+.mobile-link{
+  text-decoration:none;
+}
+
+@media (max-width:1100px){
 
 .sidebar{
-display:none;
+  display:none;
+}
+
+.mobile-sidebar{
+
+  position:fixed;
+
+  left:50%;
+  bottom:18px;
+
+  transform:translateX(-50%);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+
+  padding:12px 22px;
+
+  border-radius:999px;
+
+  background:rgba(8,8,20,.82);
+
+  backdrop-filter:blur(20px);
+
+  border:1px solid rgba(139,92,246,.22);
+
+  box-shadow:
+      0 12px 35px rgba(0,0,0,.45);
+
+  z-index:999;
+
+  opacity:0;
+
+  transition:.5s ease;
+}
+
+.mobile-sidebar.visible{
+  opacity:1;
+}
+
+.mobile-link{
+
+  width:46px;
+  height:46px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,.05);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  color:#ffffff;
+
+  transition:.3s;
+}
+
+.mobile-link svg{
+  width:22px;
+  height:22px;
+}
+
+.mobile-link:hover{
+
+  background:#8b5cf6;
+
+  border-color:#8b5cf6;
+
+  transform:translateY(-4px);
+
+  box-shadow:
+      0 0 18px rgba(139,92,246,.45);
+
+}
+
+}
+
+/* =========================
+   Small Phones
+========================= */
+
+@media (max-width:480px){
+
+.mobile-sidebar{
+
+  gap:12px;
+
+  padding:10px 16px;
+
+  bottom:14px;
+
+}
+
+.mobile-link{
+
+  width:42px;
+  height:42px;
+
+}
+
+.mobile-link svg{
+
+  width:20px;
+  height:20px;
+
 }
 
 }
