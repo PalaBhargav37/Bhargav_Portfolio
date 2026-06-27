@@ -224,7 +224,8 @@ export default function Contact() {
 
                   <div className="form-footer">
                     <p className="form-note">
-                      <span>🔒</span> Your info is never shared or stored beyond EmailJS.
+                      <span>🔒</span> Your privacy matters. The information you submit through this form is used only for communication purposes.
+
                     </p>
                     <button
                       type="submit"
