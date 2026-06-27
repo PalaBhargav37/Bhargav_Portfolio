@@ -1,0 +1,50 @@
+.navbar {
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:1.4rem 2rem;
+  transition:all 0.4s ease;
+}
+.navbar.scrolled {
+  padding:0.85rem 2rem;
+  background:rgba(3,1,10,0.85);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(139,92,246,0.15);
+  box-shadow:0 4px 40px rgba(0,0,0,0.4),0 0 80px rgba(139,92,246,0.04) inset;
+}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:2rem}
+.nav-logo{font-family:var(--font-display);font-weight:700;font-size:1.15rem;text-decoration:none;display:flex;align-items:center;gap:0.05em;margin-right:auto}
+.logo-bracket{color:var(--violet);font-weight:400}
+.logo-name{color:var(--white)}
+.nav-links{display:flex;list-style:none;gap:0.1rem;align-items:center}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-family:var(--font-body);font-size:0.9rem;padding:0.45rem 0.9rem;border-radius:8px;transition:all 0.25s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:2px;left:50%;transform:translateX(-50%);width:0;height:2px;background:linear-gradient(90deg,var(--violet),var(--cyan));border-radius:1px;transition:width 0.3s ease}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-links a:hover::after,.nav-links a.active::after{width:55%}
+.nav-cta{font-family:var(--font-mono);font-size:0.8rem;color:var(--violet-light);text-decoration:none;border:1.5px solid rgba(139,92,246,0.38);padding:0.48rem 1.1rem;border-radius:8px;transition:all 0.25s;white-space:nowrap}
+.nav-cta:hover{border-color:var(--violet);color:var(--white);background:rgba(139,92,246,0.12);box-shadow:0 0 24px rgba(139,92,246,0.25)}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:0.4rem;margin-left:auto}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s ease}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-drawer{display:none;position:fixed;inset:0;z-index:999;background:rgba(3,1,10,0.97);backdrop-filter:blur(28px);opacity:0;visibility:hidden;transition:all 0.35s ease}
+.mobile-drawer.open{opacity:1;visibility:visible}
+.drawer-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;gap:1.8rem;padding:2rem}
+.drawer-logo{font-size:1.5rem}
+.drawer-links{list-style:none;display:flex;flex-direction:column;align-items:center;gap:0.4rem;width:100%;max-width:280px}
+.drawer-links a{display:flex;align-items:center;gap:1rem;color:var(--text);text-decoration:none;font-family:var(--font-display);font-size:1.35rem;font-weight:500;padding:0.85rem 1.4rem;border-radius:12px;transition:all 0.2s;width:100%}
+.drawer-links a:hover{background:rgba(139,92,246,0.12);color:var(--white);padding-left:2rem}
+.drawer-num{font-family:var(--font-mono);font-size:0.72rem;color:var(--violet)}
+.drawer-cta{margin-top:0.8rem}
+@media (max-width: 900px){
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .hamburger{display:flex}
+  .mobile-drawer{display:block}
+  .navbar{padding:1rem 1.2rem}
+  .navbar.scrolled{padding:0.7rem 1.2rem}
+}
+@media (max-width: 480px){
+  .navbar{padding:0.9rem 0.95rem}
+  .navbar.scrolled{padding:0.7rem 0.95rem}
+  .drawer-links a{font-size:1.15rem;padding:0.8rem 1.2rem}
+}
