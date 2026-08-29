@@ -213,7 +213,7 @@ export default function Hero() {
             // { num: '12+', label: 'Projects', unit: '' },
             // { num: '2', label: 'Internships', unit: '' },
             // { num: '100+', label: 'DSA Solved', unit: '' },
-             {num: "2", label: "Internships",unit: '' },
+             {num: "2", label: "Experience",unit: '' },
              { num: "15+", label: " Projects",unit: '' },
              { num: "14+", label: "Tech Stack",unit: '' },
              {  num: "3", label: "Certifications",unit: '' },
