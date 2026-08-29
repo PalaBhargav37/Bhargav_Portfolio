@@ -5,7 +5,7 @@ const ROLES = [
   'Full-Stack Developer',
   'Java & Django Engineer',
   'Problem Solver',
-  'SDE Intern @ Infosys',
+  'Systems Engineer @ Infosys',
   'Open to Work 🚀',
 ];
 
