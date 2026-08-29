@@ -41,7 +41,7 @@ export default function About() {
             <div className="reveal delay-100">
               <div className="reveal">
   <p>
-    Hello! I'm <strong className="hl">Pala Bhargav</strong> — a Computer Science engineer who enjoys turning complex problems into elegant, efficient software. I graduated from <strong className="hl">GIET</strong> with a CGPA of 8.38 and am currently sharpening my skills as an <strong className="hl">SDE Intern at Infosys</strong>.
+    Hello! I'm <strong className="hl">Pala Bhargav</strong> — a Computer Science engineer who enjoys turning complex problems into elegant, efficient software. I graduated from <strong className="hl">GIET</strong> with a CGPA of 8.38 and am currently sharpening my skills as an <strong className="hl">Systems Engineer at Infosys</strong>.
   </p>
 </div>
 
@@ -94,12 +94,12 @@ export default function About() {
       </h3>
 
       <p className="profile-role">
-        Software Development Engineer Intern
+        Systems Engineer
       </p>
 
       <div className="card-otw">
         <span className="card-otw-dot" />
-        Open to Work • Full-Time / Internship
+        Open to Work • Full-Time 
       </div>
 
     </div>
@@ -115,7 +115,7 @@ export default function About() {
 
       <div className="meta-row">
         <span className="meta-icon">🏢</span>
-        <span>Infosys Limited · SDE Intern</span>
+        <span>Infosys Limited · Systems Engineer</span>
       </div>
 
       <div className="meta-row">

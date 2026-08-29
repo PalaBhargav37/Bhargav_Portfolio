@@ -6,7 +6,7 @@ const JOBS = [
   {
     id: 'infosys',
     company: 'Infosys Limited',
-    role: 'Software Development Engineer Intern',
+    role: 'Systems Engineer',
     period: 'July 2025 – Present',
     type: 'Industry',
     color: '#6c63ff',
